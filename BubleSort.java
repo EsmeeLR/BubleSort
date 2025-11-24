@@ -22,5 +22,20 @@ public class BubleSort {
         }
     }
 
+    // Método para imprimir el arreglo
+    public static void imprimirArreglo(int[] arr) {
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+    }
 
+    // Guardar arreglo en archivo
+    public static void guardarEnArchivo(int[] arr, String nombreArchivo) throws IOException {
+        BufferedWriter bw = new BufferedWriter(new FileWriter(nombreArchivo));
+        for (int num : arr) {
+            bw.write(num + " ");
+        }
+        bw.close();
+    }
 }
